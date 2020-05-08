@@ -18,6 +18,7 @@ router.get("/", auth, async (req, res) => {
     res.json(user);
   } catch (err) {
     console.log(err.message);
+
     res.status(500).send("Server error");
   }
 });
@@ -58,7 +59,6 @@ router.post(
           .status(400)
           .json({ errors: [{ msg: "Invalid credentials" }] });
       }
-      
 
       const payload = {
         user: {
