@@ -9,9 +9,12 @@ import Education from './Education';
 import { getCurrentProfile, deleteAccount } from '../../actions/profile';
 
 const Dashboard = ({ deleteAccount, getCurrentProfile, auth: { user }, profile: { profile, loading } }) => {
-	useEffect(() => {
-		getCurrentProfile();
-	}, []);
+	useEffect(
+		() => {
+			getCurrentProfile();
+		},
+		[ getCurrentProfile ]
+	);
 	return loading && profile === null ? (
 		<Spinner />
 	) : (

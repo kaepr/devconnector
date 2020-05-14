@@ -41,7 +41,7 @@ const EditProfile = ({ createProfile, history, getCurrentProfile, profile: { pro
 				instagram: loading || !profile.social ? '' : profile.social.instagram
 			});
 		},
-		[ loading ]
+		[ loading, getCurrentProfile ]
 	);
 
 	const {
