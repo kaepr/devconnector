@@ -23,7 +23,7 @@ const Posts = ({ getPosts, post: { posts, loading } }) => {
 				<i className="fas fa-user" /> Welcome to the community
 			</p>
 			<PostForm />
-			<div className="post">{posts.map((post) => <PostItem key={post._id} post={post} />)}</div>
+			<div className="posts">{posts.map((post) => <PostItem key={post._id} post={post} />)}</div>
 		</Fragment>
 	);
 };
